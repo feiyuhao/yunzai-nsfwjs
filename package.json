@@ -1,0 +1,36 @@
+{
+  "name": "yunzai-nsfwjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "set PKG_CACHE_PATH=./.pkg-cache/&& pkg . --compress GZip"
+  },
+  "bin": "index.js",
+  "pkg": {
+    "scripts": [],
+    "assets": [
+      "jiantu/**/*",
+      "node_modules/@tensorflow/tfjs-node/lib/napi-v8/tfjs_binding.node",
+      "node_modules/@tensorflow/tfjs-node/lib/napi-v8/tensorflow.dll"
+    ],
+    "targets": [
+      "node12-win-x64",
+      "node12-linux-x64",
+      "node12-macos-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^3.18.0",
+    "axios": "^0.27.2",
+    "nsfwjs": "^2.4.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.3.0"
+  }
+}
